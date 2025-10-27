@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sri Sabthagiri Groups – Home & About Us</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green-dark: #14532d;
+      --green: #22c55e;
+      --green-light: #bbf7d0;
+      --white: #fff;
+      --gray: #f3f4f6;
+      --text: #222;
+    }
+    body {
+      margin: 0;
+      font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+      background: var(--gray);
+      color: var(--text);
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--green-dark);
+      padding: 1rem 2rem;
+    }
+    .logo {
+      color: var(--green);
+      font-size: 1.7rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      display: flex;
+      align-items: center;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.1rem;
+      transition: color 0.2s;
+      position: relative;
+    }
+    .nav-links a.active,
+    .nav-links a:hover {
+      color: var(--green);
+    }
+    .hero-section {
+      background: linear-gradient(120deg, var(--green) 60%, var(--green-light) 100%);
+      min-height: 45vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      color: var(--white);
+      text-align: center;
+    }
+    .hero-content {
+      padding: 4rem 2rem 3rem 2rem;
+      border-radius: 18px;
+      max-width: 700px;
+      margin: 3rem auto;
+      background: rgba(20, 83, 45, 0.7);
+    }
+    .hero-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .btn-primary {
+      background: var(--green);
+      color: var(--white);
+      padding: 0.9rem 2.2rem;
+      border: none;
+      border-radius: 25px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-primary:hover {
+      background: var(--green-dark);
+      color: var(--white);
+    }
+    .about-section {
+      background: var(--white);
+      padding: 3rem 2rem 2rem 2rem;
+      text-align: center;
+    }
+    .about-section h2 {
+      color: var(--green-dark);
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+    .about-section p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.15rem;
+    }
+    .footer-multicolumn {
+      background: var(--green-dark);
+      color: #fff;
+      padding: 0;
+      margin-top: 2rem;
+      font-size: 1rem;
+    }
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2.5rem 2rem 1.5rem 2rem;
+    }
+    .footer-col {
+      flex: 1 1 180px;
+      min-width: 180px;
+      margin: 0 1rem 1.5rem 1rem;
+    }
+    .footer-col h3 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+    .footer-col p, .footer-col a {
+      color: #fff;
+      margin: 0.3rem 0;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.2s;
+    }
+    .footer-col a:hover {
+      color: var(--green);
+      text-decoration: underline;
+    }
+    .footer-bottom {
+      text-align: center;
+      padding: 1rem 0 0.5rem 0;
+      background: var(--green-dark);
+      color: #fff;
+      font-size: 1rem;
+      border-top: 1px solid #fff2;
+    }
+    .business-section {
+      background: var(--white);
+      padding: 2.5rem 2rem 2rem 2rem;
+      text-align: center;
+    }
+    .business-title {
+      color: var(--green-dark);
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+    .business-boxes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+    .business-box {
+      background: linear-gradient(120deg, var(--green) 60%, var(--green-light) 100%);
+      color: var(--green-dark);
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(20, 83, 45, 0.10);
+      width: 200px;
+      min-height: 160px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 1.15rem;
+      font-weight: 600;
+      transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+      margin-bottom: 1rem;
+    }
+    .business-box:hover {
+      transform: translateY(-8px) scale(1.04);
+      box-shadow: 0 6px 16px rgba(20, 83, 45, 0.15);
+      background: linear-gradient(120deg, var(--green-dark) 60%, var(--green) 100%);
+      color: var(--white);
+    }
+    .business-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.7rem;
+    }
+    .business-name {
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+    @media (max-width: 900px) {
+      .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem 1rem 1rem 1rem;
+      }
+      .footer-col {
+        margin: 0 0 1.5rem 0;
+        min-width: 0;
+      }
+      .business-boxes {
+        gap: 1rem;
+      }
+      .business-box {
+        width: 100%;
+        min-width: 0;
+      }
+    }
+    @media (max-width: 700px) {
+      .hero-content {
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <!-- Removed navbar as per user request -->
+
+  <!-- Hero Section -->
+  <header class="hero-section">
+    <div class="hero-content">
+      <h1>Welcome to Sri Sabthagiri Groups</h1>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <h2>About Sri Sabthagiri Groups</h2>
+    <p>
+      Sri Sabthagiri group of companies are constituted and run with the ideals of service, integrity and quality. We prefer quality to quantity in our business and we want to be identified amongst the people of business ethics and values. We want to provide our clients the fullest value to their money and to deliver the service which is truly worth for every penny spent upon it. Our group of companies is listed below.
+    </p>
+  </section>
+
+  <!-- Business Selection Section -->
+  <section class="business-section">
+    <h2 class="business-title">Our Services</h2>
+    <div class="business-boxes">
+      <a class="business-box" href="real estate.html">
+        <div class="business-icon">🏠</div>
+        <div class="business-name">Real Estate</div>
+      </a>
+      <a class="business-box" href="sabthagiri.html">
+        <div class="business-icon">🏨</div>
+        <div class="business-name">Hotel Sabthagiri</div>
+      </a>
+      <a class="business-box" href="hotel-green-palace.html">
+        <div class="business-icon">🌿</div>
+        <div class="business-name">Hotel Green Palace</div>
+      </a>
+      <a class="business-box" href="Pleacent inn.html">
+        <div class="business-icon">🛏️</div>
+        <div class="business-name">Pleasant Inn</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-multicolumn">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <p><a href="#">Home</a></p>
+        <p><a href="#">About Us</a></p>
+        <p><a href="#projects">Projects</a></p>
+        <p><a href="#contact">Contact</a></p>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <p>No.333, Poonamallee High Road, Amaindakarai, Chennai – 600 030</p>
+        <p>+91 44 4393 7979</p>
+        <p>info@srisabthagiri.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Sri Sabthagiri Groups. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

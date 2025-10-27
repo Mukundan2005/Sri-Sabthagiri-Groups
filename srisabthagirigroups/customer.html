@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Sabthagiri Real Estate - Customer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="sabthagiri logo.png.png" alt="Sri Sabthagiri Real Estate Logo" class="logo-img">
+            Sri Sabthagiri Real Estate
+        </div>
+        <ul class="nav-links">
+            <li><a href="real estate.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="customer.html">Customer</a></li>
+
+        </ul>
+    </nav>
+    <section class="emi-section" style="max-width: 500px; margin: 3rem auto; background: var(--white); border-radius: 12px; box-shadow: 0 2px 12px rgba(20, 83, 45, 0.10); padding: 2rem;">
+        <h2 style="color: var(--green-dark); text-align: center;">EMI Calculator</h2>
+        <form id="emi-form" style="display: flex; flex-direction: column; gap: 1.2rem;">
+            <input type="number" id="loan-amount" placeholder="Loan Amount (₹)" required style="padding: 0.8rem; border-radius: 6px; border: 1px solid var(--green-light);">
+            <input type="number" id="interest-rate" placeholder="Interest Rate (% per annum)" required style="padding: 0.8rem; border-radius: 6px; border: 1px solid var(--green-light);">
+            <input type="number" id="loan-tenure" placeholder="Loan Tenure (years)" required style="padding: 0.8rem; border-radius: 6px; border: 1px solid var(--green-light);">
+            <button type="submit" class="btn-primary" style="width: 180px; align-self: center;">Calculate EMI</button>
+        </form>
+        <div id="emi-result" style="margin-top: 2rem; text-align: center; font-size: 1.2rem; color: var(--green-dark);"></div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html> 
